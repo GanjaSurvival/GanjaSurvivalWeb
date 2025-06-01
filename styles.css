@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'Verdana', sans-serif;
+  background: #0b0e0d;
+  color: #e2e2e2;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #93e088;
+}
+.discord-button, .donate-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}

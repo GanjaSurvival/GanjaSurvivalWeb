@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Tracker - Ganja Survival</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/javascript">
+    window.addEventListener('message', function(e) {
+      if (e.data.uid && e.data.type === 'sizeUpdate') {
+        var i = document.querySelector('iframe[name="' + e.data.uid + '"]');
+        if (i) {
+          i.style.width = e.data.payload.width;
+          i.style.height = e.data.payload.height;
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <header><img src="logo.png" class="logo"/><h1>Ganja Survival</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="discord.html">Discord</a>
+    <a href="donate.html">Donate</a>
+    <a href="tracker.html">Server Tracker</a>
+  </nav>
+  <main>
+    <h2>Live Server Tracker</h2>
+    <iframe src="https://cdn.battlemetrics.com/b/horizontal500x80px/28781565.html?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700" name="iviob"></iframe>
+  </main>
+  <footer><p>&copy; 2025 Ganja Survival</p></footer>
+</body>
+</html>

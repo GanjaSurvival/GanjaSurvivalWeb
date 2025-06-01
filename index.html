@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganja Survival</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e2e2e2;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      height: 80px;
+    }
+    h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 2.5em;
+      color: #93e088;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 700px;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+  <script type="application/javascript">
+    window.addEventListener('message', function(e) {
+      if (e.data.uid && e.data.type === 'sizeUpdate') {
+        var i = document.querySelector('iframe[name="' + e.data.uid + '"]');
+        if (i) {
+          i.style.width = e.data.payload.width;
+          i.style.height = e.data.payload.height;
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="GanjaSurvivalFinalFinal.png" alt="Ganja Survival Logo" class="logo" />
+    <h1>Ganja Survival</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="discord.html">Discord</a>
+    <a href="donate.html">Donate</a>
+    <a href="tracker.html">Server Tracker</a>
+  </nav>
+  <main>
+    <!-- Dynamic pages will be routed separately -->
+  </main>
+  <footer>
+    <p>&copy; 2025 Ganja Survival</p>
+  </footer>
+</body>
+</html>
